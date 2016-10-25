@@ -1,0 +1,543 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "RuBeeBridgable"
+provides-nominal:
+- "P5RuBee14RuBeeBridgable"
+- "SS"
+- "Si"
+- "Sb"
+- "Sd"
+provides-member:
+- ["P5RuBee14RuBeeBridgable", ""]
+- ["SS", ""]
+- ["Si", ""]
+- ["Sb", ""]
+- ["Sd", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "StringLiteralType"
+- "RSymbol"
+- !private "rb_string_value_cstr"
+- !private "RUBY_Qtrue"
+- !private "fatalError"
+- "String"
+- !private "rb_long2num_inline"
+- !private "RUBY_Qfalse"
+- !private "rb_num2long"
+- !private "unsafeBitCast"
+- "VALUE"
+- "Int"
+- !private "rb_float_new"
+- !private "rb_float_value"
+- !private "rb_str_new_cstr"
+- "Bool"
+- !private "RType"
+- "Double"
+- "RubyValue"
+- !private "BooleanLiteralType"
+- "RuBeeBridgable"
+depends-member:
+- !private ["Ps16AbsoluteValuable", "RType"]
+- !private ["Ps16AbsoluteValuable", "fatalError"]
+- ["Ps16AbsoluteValuable", "init"]
+- !private ["Ps16AbsoluteValuable", "rb_float_new"]
+- !private ["Ps16AbsoluteValuable", "rb_float_value"]
+- ["Ps16AbsoluteValuable", "rubyValue"]
+- !private ["Ps17BitwiseOperations", "RType"]
+- !private ["Ps17BitwiseOperations", "fatalError"]
+- ["Ps17BitwiseOperations", "init"]
+- !private ["Ps17BitwiseOperations", "rb_long2num_inline"]
+- !private ["Ps17BitwiseOperations", "rb_num2long"]
+- ["Ps17BitwiseOperations", "rubyValue"]
+- !private ["Sb", "RType"]
+- !private ["Sb", "RUBY_Qfalse"]
+- !private ["Sb", "RUBY_Qtrue"]
+- ["Sb", "VALUE"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
+- !private ["Sb", "fatalError"]
+- ["Sb", "init"]
+- ["Sb", "rubyValue"]
+- !private ["Sb", "unsafeBitCast"]
+- !private ["Ps7Boolean", "RType"]
+- !private ["Ps7Boolean", "RUBY_Qfalse"]
+- !private ["Ps7Boolean", "RUBY_Qtrue"]
+- !private ["Ps7Boolean", "VALUE"]
+- !private ["Ps7Boolean", "_getBuiltinLogicValue"]
+- !private ["Ps7Boolean", "fatalError"]
+- ["Ps7Boolean", "init"]
+- ["Ps7Boolean", "rubyValue"]
+- !private ["Ps7Boolean", "unsafeBitCast"]
+- !private ["Ps25BooleanLiteralConvertible", "RType"]
+- !private ["Ps25BooleanLiteralConvertible", "RUBY_Qfalse"]
+- !private ["Ps25BooleanLiteralConvertible", "RUBY_Qtrue"]
+- !private ["Ps25BooleanLiteralConvertible", "VALUE"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "fatalError"]
+- ["Ps25BooleanLiteralConvertible", "init"]
+- ["Ps25BooleanLiteralConvertible", "rubyValue"]
+- !private ["Ps25BooleanLiteralConvertible", "unsafeBitCast"]
+- !private ["Ps7CVarArg", "RType"]
+- !private ["Ps7CVarArg", "fatalError"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "rb_float_new"]
+- !private ["Ps7CVarArg", "rb_float_value"]
+- !private ["Ps7CVarArg", "rb_long2num_inline"]
+- !private ["Ps7CVarArg", "rb_num2long"]
+- ["Ps7CVarArg", "rubyValue"]
+- !private ["Ps10Comparable", "RSymbol"]
+- !private ["Ps10Comparable", "RType"]
+- !private ["Ps10Comparable", "fatalError"]
+- ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "rb_float_new"]
+- !private ["Ps10Comparable", "rb_float_value"]
+- !private ["Ps10Comparable", "rb_long2num_inline"]
+- !private ["Ps10Comparable", "rb_num2long"]
+- !private ["Ps10Comparable", "rb_str_new_cstr"]
+- !private ["Ps10Comparable", "rb_string_value_cstr"]
+- ["Ps10Comparable", "rubyValue"]
+- !private ["Ps28CustomDebugStringConvertible", "RSymbol"]
+- !private ["Ps28CustomDebugStringConvertible", "RType"]
+- !private ["Ps28CustomDebugStringConvertible", "fatalError"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "rb_float_new"]
+- !private ["Ps28CustomDebugStringConvertible", "rb_float_value"]
+- !private ["Ps28CustomDebugStringConvertible", "rb_str_new_cstr"]
+- !private ["Ps28CustomDebugStringConvertible", "rb_string_value_cstr"]
+- ["Ps28CustomDebugStringConvertible", "rubyValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "RSymbol"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "RType"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "RUBY_Qfalse"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "RUBY_Qtrue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "VALUE"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "fatalError"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "rb_float_new"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "rb_float_value"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "rb_long2num_inline"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "rb_num2long"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "rb_str_new_cstr"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "rb_string_value_cstr"]
+- ["Ps29CustomPlaygroundQuickLookable", "rubyValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "unsafeBitCast"]
+- !private ["Ps17CustomReflectable", "RSymbol"]
+- !private ["Ps17CustomReflectable", "RType"]
+- !private ["Ps17CustomReflectable", "RUBY_Qfalse"]
+- !private ["Ps17CustomReflectable", "RUBY_Qtrue"]
+- !private ["Ps17CustomReflectable", "VALUE"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "fatalError"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "rb_float_new"]
+- !private ["Ps17CustomReflectable", "rb_float_value"]
+- !private ["Ps17CustomReflectable", "rb_long2num_inline"]
+- !private ["Ps17CustomReflectable", "rb_num2long"]
+- !private ["Ps17CustomReflectable", "rb_str_new_cstr"]
+- !private ["Ps17CustomReflectable", "rb_string_value_cstr"]
+- ["Ps17CustomReflectable", "rubyValue"]
+- !private ["Ps17CustomReflectable", "unsafeBitCast"]
+- !private ["Ps23CustomStringConvertible", "RType"]
+- !private ["Ps23CustomStringConvertible", "RUBY_Qfalse"]
+- !private ["Ps23CustomStringConvertible", "RUBY_Qtrue"]
+- !private ["Ps23CustomStringConvertible", "VALUE"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "fatalError"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "rb_float_new"]
+- !private ["Ps23CustomStringConvertible", "rb_float_value"]
+- !private ["Ps23CustomStringConvertible", "rb_long2num_inline"]
+- !private ["Ps23CustomStringConvertible", "rb_num2long"]
+- ["Ps23CustomStringConvertible", "rubyValue"]
+- !private ["Ps23CustomStringConvertible", "unsafeBitCast"]
+- !private ["Sd", "RType"]
+- ["Sd", "VALUE"]
+- ["Sd", "deinit"]
+- !private ["Sd", "fatalError"]
+- ["Sd", "init"]
+- !private ["Sd", "rb_float_new"]
+- !private ["Sd", "rb_float_value"]
+- ["Sd", "rubyValue"]
+- !private ["Ps9Equatable", "RSymbol"]
+- !private ["Ps9Equatable", "RType"]
+- !private ["Ps9Equatable", "RUBY_Qfalse"]
+- !private ["Ps9Equatable", "RUBY_Qtrue"]
+- !private ["Ps9Equatable", "VALUE"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "bignum"]
+- ["Ps9Equatable", "false"]
+- !private ["Ps9Equatable", "fatalError"]
+- ["Ps9Equatable", "fixnum"]
+- ["Ps9Equatable", "float"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "rb_float_new"]
+- !private ["Ps9Equatable", "rb_float_value"]
+- !private ["Ps9Equatable", "rb_long2num_inline"]
+- !private ["Ps9Equatable", "rb_num2long"]
+- !private ["Ps9Equatable", "rb_str_new_cstr"]
+- !private ["Ps9Equatable", "rb_string_value_cstr"]
+- ["Ps9Equatable", "rubyValue"]
+- ["Ps9Equatable", "true"]
+- !private ["Ps9Equatable", "type"]
+- !private ["Ps9Equatable", "unsafeBitCast"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "RSymbol"]
+- ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "rb_str_new_cstr"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "rb_string_value_cstr"]
+- ["Ps41ExtendedGraphemeClusterLiteralConvertible", "rubyValue"]
+- !private ["Ps23FloatLiteralConvertible", "RType"]
+- !private ["Ps23FloatLiteralConvertible", "fatalError"]
+- ["Ps23FloatLiteralConvertible", "init"]
+- !private ["Ps23FloatLiteralConvertible", "rb_float_new"]
+- !private ["Ps23FloatLiteralConvertible", "rb_float_value"]
+- ["Ps23FloatLiteralConvertible", "rubyValue"]
+- !private ["Ps13FloatingPoint", "RType"]
+- !private ["Ps13FloatingPoint", "fatalError"]
+- ["Ps13FloatingPoint", "init"]
+- !private ["Ps13FloatingPoint", "rb_float_new"]
+- !private ["Ps13FloatingPoint", "rb_float_value"]
+- ["Ps13FloatingPoint", "rubyValue"]
+- !private ["Ps8Hashable", "RSymbol"]
+- !private ["Ps8Hashable", "RType"]
+- !private ["Ps8Hashable", "RUBY_Qfalse"]
+- !private ["Ps8Hashable", "RUBY_Qtrue"]
+- !private ["Ps8Hashable", "VALUE"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "bignum"]
+- ["Ps8Hashable", "false"]
+- !private ["Ps8Hashable", "fatalError"]
+- ["Ps8Hashable", "fixnum"]
+- ["Ps8Hashable", "float"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "rb_float_new"]
+- !private ["Ps8Hashable", "rb_float_value"]
+- !private ["Ps8Hashable", "rb_long2num_inline"]
+- !private ["Ps8Hashable", "rb_num2long"]
+- !private ["Ps8Hashable", "rb_str_new_cstr"]
+- !private ["Ps8Hashable", "rb_string_value_cstr"]
+- ["Ps8Hashable", "rubyValue"]
+- ["Ps8Hashable", "true"]
+- !private ["Ps8Hashable", "type"]
+- !private ["Ps8Hashable", "unsafeBitCast"]
+- !private ["Si", "RType"]
+- ["Si", "VALUE"]
+- ["Si", "deinit"]
+- !private ["Si", "fatalError"]
+- ["Si", "init"]
+- !private ["Si", "rb_long2num_inline"]
+- !private ["Si", "rb_num2long"]
+- ["Si", "rubyValue"]
+- !private ["Ps7Integer", "RType"]
+- !private ["Ps7Integer", "fatalError"]
+- ["Ps7Integer", "init"]
+- !private ["Ps7Integer", "rb_long2num_inline"]
+- !private ["Ps7Integer", "rb_num2long"]
+- ["Ps7Integer", "rubyValue"]
+- !private ["Ps17IntegerArithmetic", "RType"]
+- !private ["Ps17IntegerArithmetic", "fatalError"]
+- ["Ps17IntegerArithmetic", "init"]
+- !private ["Ps17IntegerArithmetic", "rb_long2num_inline"]
+- !private ["Ps17IntegerArithmetic", "rb_num2long"]
+- ["Ps17IntegerArithmetic", "rubyValue"]
+- !private ["Ps25IntegerLiteralConvertible", "RType"]
+- !private ["Ps25IntegerLiteralConvertible", "fatalError"]
+- ["Ps25IntegerLiteralConvertible", "init"]
+- !private ["Ps25IntegerLiteralConvertible", "rb_float_new"]
+- !private ["Ps25IntegerLiteralConvertible", "rb_float_value"]
+- !private ["Ps25IntegerLiteralConvertible", "rb_long2num_inline"]
+- !private ["Ps25IntegerLiteralConvertible", "rb_num2long"]
+- ["Ps25IntegerLiteralConvertible", "rubyValue"]
+- !private ["Ps10MirrorPath", "RSymbol"]
+- !private ["Ps10MirrorPath", "RType"]
+- !private ["Ps10MirrorPath", "fatalError"]
+- ["Ps10MirrorPath", "init"]
+- !private ["Ps10MirrorPath", "rb_long2num_inline"]
+- !private ["Ps10MirrorPath", "rb_num2long"]
+- !private ["Ps10MirrorPath", "rb_str_new_cstr"]
+- !private ["Ps10MirrorPath", "rb_string_value_cstr"]
+- ["Ps10MirrorPath", "rubyValue"]
+- !private ["Ps12OutputStream", "RSymbol"]
+- ["Ps12OutputStream", "init"]
+- !private ["Ps12OutputStream", "rb_str_new_cstr"]
+- !private ["Ps12OutputStream", "rb_string_value_cstr"]
+- ["Ps12OutputStream", "rubyValue"]
+- !private ["V5RuBee7RSymbol", "deinit"]
+- !private ["V5RuBee7RSymbol", "init"]
+- ["O5RuBee5RType", "bignum"]
+- ["O5RuBee5RType", "false"]
+- ["O5RuBee5RType", "fixnum"]
+- ["O5RuBee5RType", "float"]
+- ["O5RuBee5RType", "true"]
+- !private ["O5RuBee5RType", "type"]
+- ["Ps16RawRepresentable", "bignum"]
+- ["Ps16RawRepresentable", "false"]
+- ["Ps16RawRepresentable", "fixnum"]
+- ["Ps16RawRepresentable", "float"]
+- ["Ps16RawRepresentable", "true"]
+- !private ["Ps16RawRepresentable", "type"]
+- !private ["P5RuBee14RuBeeBridgable", "RSymbol"]
+- !private ["P5RuBee14RuBeeBridgable", "RType"]
+- !private ["P5RuBee14RuBeeBridgable", "RUBY_Qfalse"]
+- !private ["P5RuBee14RuBeeBridgable", "RUBY_Qtrue"]
+- ["P5RuBee14RuBeeBridgable", "VALUE"]
+- !private ["P5RuBee14RuBeeBridgable", "_getBuiltinLogicValue"]
+- !private ["P5RuBee14RuBeeBridgable", "fatalError"]
+- ["P5RuBee14RuBeeBridgable", "init"]
+- !private ["P5RuBee14RuBeeBridgable", "rb_float_new"]
+- !private ["P5RuBee14RuBeeBridgable", "rb_float_value"]
+- !private ["P5RuBee14RuBeeBridgable", "rb_long2num_inline"]
+- !private ["P5RuBee14RuBeeBridgable", "rb_num2long"]
+- !private ["P5RuBee14RuBeeBridgable", "rb_str_new_cstr"]
+- !private ["P5RuBee14RuBeeBridgable", "rb_string_value_cstr"]
+- ["P5RuBee14RuBeeBridgable", "rubyValue"]
+- !private ["P5RuBee14RuBeeBridgable", "unsafeBitCast"]
+- ["P5RuBee14RuBeeBridgable", ""]
+- !private ["P5RuBee9RubyValue", "RSymbol"]
+- !private ["P5RuBee9RubyValue", "RType"]
+- !private ["P5RuBee9RubyValue", "RUBY_Qfalse"]
+- !private ["P5RuBee9RubyValue", "RUBY_Qtrue"]
+- ["P5RuBee9RubyValue", "VALUE"]
+- !private ["P5RuBee9RubyValue", "_getBuiltinLogicValue"]
+- !private ["P5RuBee9RubyValue", "fatalError"]
+- ["P5RuBee9RubyValue", "init"]
+- !private ["P5RuBee9RubyValue", "rb_float_new"]
+- !private ["P5RuBee9RubyValue", "rb_float_value"]
+- !private ["P5RuBee9RubyValue", "rb_long2num_inline"]
+- !private ["P5RuBee9RubyValue", "rb_num2long"]
+- !private ["P5RuBee9RubyValue", "rb_str_new_cstr"]
+- !private ["P5RuBee9RubyValue", "rb_string_value_cstr"]
+- ["P5RuBee9RubyValue", "rubyValue"]
+- !private ["P5RuBee9RubyValue", "unsafeBitCast"]
+- ["P5RuBee9RubyValue", ""]
+- !private ["Ps13SignedInteger", "RType"]
+- !private ["Ps13SignedInteger", "fatalError"]
+- ["Ps13SignedInteger", "init"]
+- !private ["Ps13SignedInteger", "rb_long2num_inline"]
+- !private ["Ps13SignedInteger", "rb_num2long"]
+- ["Ps13SignedInteger", "rubyValue"]
+- !private ["Ps12SignedNumber", "RType"]
+- !private ["Ps12SignedNumber", "fatalError"]
+- ["Ps12SignedNumber", "init"]
+- !private ["Ps12SignedNumber", "rb_float_new"]
+- !private ["Ps12SignedNumber", "rb_float_value"]
+- !private ["Ps12SignedNumber", "rb_long2num_inline"]
+- !private ["Ps12SignedNumber", "rb_num2long"]
+- ["Ps12SignedNumber", "rubyValue"]
+- !private ["Vs12StaticString", "deinit"]
+- !private ["Ps10Streamable", "RSymbol"]
+- ["Ps10Streamable", "init"]
+- !private ["Ps10Streamable", "rb_str_new_cstr"]
+- !private ["Ps10Streamable", "rb_string_value_cstr"]
+- ["Ps10Streamable", "rubyValue"]
+- !private ["Ps10Strideable", "RType"]
+- !private ["Ps10Strideable", "fatalError"]
+- ["Ps10Strideable", "init"]
+- !private ["Ps10Strideable", "rb_float_new"]
+- !private ["Ps10Strideable", "rb_float_value"]
+- !private ["Ps10Strideable", "rb_long2num_inline"]
+- !private ["Ps10Strideable", "rb_num2long"]
+- ["Ps10Strideable", "rubyValue"]
+- ["SS", "RSymbol"]
+- ["SS", "VALUE"]
+- ["SS", "deinit"]
+- ["SS", "init"]
+- !private ["SS", "rb_str_new_cstr"]
+- !private ["SS", "rb_string_value_cstr"]
+- ["SS", "rubyValue"]
+- ["SS", "symbol"]
+- !private ["Ps30StringInterpolationConvertible", "RSymbol"]
+- ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps30StringInterpolationConvertible", "rb_str_new_cstr"]
+- !private ["Ps30StringInterpolationConvertible", "rb_string_value_cstr"]
+- ["Ps30StringInterpolationConvertible", "rubyValue"]
+- !private ["Ps24StringLiteralConvertible", "RSymbol"]
+- ["Ps24StringLiteralConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "rb_str_new_cstr"]
+- !private ["Ps24StringLiteralConvertible", "rb_string_value_cstr"]
+- ["Ps24StringLiteralConvertible", "rubyValue"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "RSymbol"]
+- ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "rb_str_new_cstr"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "rb_string_value_cstr"]
+- ["Ps31UnicodeScalarLiteralConvertible", "rubyValue"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "RType"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "RUBY_Qfalse"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "RUBY_Qtrue"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "VALUE"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "fatalError"]
+- ["Ps33_BuiltinBooleanLiteralConvertible", "init"]
+- ["Ps33_BuiltinBooleanLiteralConvertible", "rubyValue"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "unsafeBitCast"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "RSymbol"]
+- ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "rb_str_new_cstr"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "rb_string_value_cstr"]
+- ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "rubyValue"]
+- !private ["Ps31_BuiltinFloatLiteralConvertible", "RType"]
+- !private ["Ps31_BuiltinFloatLiteralConvertible", "fatalError"]
+- ["Ps31_BuiltinFloatLiteralConvertible", "init"]
+- !private ["Ps31_BuiltinFloatLiteralConvertible", "rb_float_new"]
+- !private ["Ps31_BuiltinFloatLiteralConvertible", "rb_float_value"]
+- ["Ps31_BuiltinFloatLiteralConvertible", "rubyValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "RType"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "fatalError"]
+- ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "rb_float_new"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "rb_float_value"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "rb_long2num_inline"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "rb_num2long"]
+- ["Ps33_BuiltinIntegerLiteralConvertible", "rubyValue"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "RSymbol"]
+- ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "rb_str_new_cstr"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "rb_string_value_cstr"]
+- ["Ps32_BuiltinStringLiteralConvertible", "rubyValue"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "RSymbol"]
+- ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "rb_str_new_cstr"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "rb_string_value_cstr"]
+- ["Ps37_BuiltinUTF16StringLiteralConvertible", "rubyValue"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "RSymbol"]
+- ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "rb_str_new_cstr"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "rb_string_value_cstr"]
+- ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "rubyValue"]
+- !private ["Ps15_CVarArgAligned", "RType"]
+- !private ["Ps15_CVarArgAligned", "fatalError"]
+- ["Ps15_CVarArgAligned", "init"]
+- !private ["Ps15_CVarArgAligned", "rb_float_new"]
+- !private ["Ps15_CVarArgAligned", "rb_float_value"]
+- ["Ps15_CVarArgAligned", "rubyValue"]
+- !private ["Ps22_CVarArgPassedAsDouble", "RType"]
+- !private ["Ps22_CVarArgPassedAsDouble", "fatalError"]
+- ["Ps22_CVarArgPassedAsDouble", "init"]
+- !private ["Ps22_CVarArgPassedAsDouble", "rb_float_new"]
+- !private ["Ps22_CVarArgPassedAsDouble", "rb_float_value"]
+- ["Ps22_CVarArgPassedAsDouble", "rubyValue"]
+- !private ["Ps14_Incrementable", "RType"]
+- !private ["Ps14_Incrementable", "fatalError"]
+- ["Ps14_Incrementable", "init"]
+- !private ["Ps14_Incrementable", "rb_long2num_inline"]
+- !private ["Ps14_Incrementable", "rb_num2long"]
+- ["Ps14_Incrementable", "rubyValue"]
+- !private ["Ps8_Integer", "RType"]
+- !private ["Ps8_Integer", "fatalError"]
+- ["Ps8_Integer", "init"]
+- !private ["Ps8_Integer", "rb_long2num_inline"]
+- !private ["Ps8_Integer", "rb_num2long"]
+- ["Ps8_Integer", "rubyValue"]
+- !private ["Ps18_IntegerArithmetic", "RType"]
+- !private ["Ps18_IntegerArithmetic", "fatalError"]
+- ["Ps18_IntegerArithmetic", "init"]
+- !private ["Ps18_IntegerArithmetic", "rb_long2num_inline"]
+- !private ["Ps18_IntegerArithmetic", "rb_num2long"]
+- ["Ps18_IntegerArithmetic", "rubyValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "RSymbol"]
+- !private ["Ps21_ObjectiveCBridgeable", "RType"]
+- !private ["Ps21_ObjectiveCBridgeable", "RUBY_Qfalse"]
+- !private ["Ps21_ObjectiveCBridgeable", "RUBY_Qtrue"]
+- !private ["Ps21_ObjectiveCBridgeable", "VALUE"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "fatalError"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "rb_float_new"]
+- !private ["Ps21_ObjectiveCBridgeable", "rb_float_value"]
+- !private ["Ps21_ObjectiveCBridgeable", "rb_long2num_inline"]
+- !private ["Ps21_ObjectiveCBridgeable", "rb_num2long"]
+- !private ["Ps21_ObjectiveCBridgeable", "rb_str_new_cstr"]
+- !private ["Ps21_ObjectiveCBridgeable", "rb_string_value_cstr"]
+- ["Ps21_ObjectiveCBridgeable", "rubyValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "unsafeBitCast"]
+- !private ["Ps14_SignedInteger", "RType"]
+- !private ["Ps14_SignedInteger", "fatalError"]
+- ["Ps14_SignedInteger", "init"]
+- !private ["Ps14_SignedInteger", "rb_long2num_inline"]
+- !private ["Ps14_SignedInteger", "rb_num2long"]
+- ["Ps14_SignedInteger", "rubyValue"]
+- !private ["Ps11_Strideable", "RType"]
+- !private ["Ps11_Strideable", "fatalError"]
+- ["Ps11_Strideable", "init"]
+- !private ["Ps11_Strideable", "rb_float_new"]
+- !private ["Ps11_Strideable", "rb_float_value"]
+- !private ["Ps11_Strideable", "rb_long2num_inline"]
+- !private ["Ps11_Strideable", "rb_num2long"]
+- ["Ps11_Strideable", "rubyValue"]
+depends-nominal:
+- "Ps16AbsoluteValuable"
+- "Ps17BitwiseOperations"
+- "Sb"
+- "Ps7Boolean"
+- "Ps25BooleanLiteralConvertible"
+- "Ps7CVarArg"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Sd"
+- "Ps9Equatable"
+- "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- "Ps23FloatLiteralConvertible"
+- "Ps13FloatingPoint"
+- "Ps8Hashable"
+- "Si"
+- "Ps7Integer"
+- "Ps17IntegerArithmetic"
+- "Ps25IntegerLiteralConvertible"
+- "Ps10MirrorPath"
+- "Ps12OutputStream"
+- !private "V5RuBee7RSymbol"
+- "O5RuBee5RType"
+- "Ps16RawRepresentable"
+- "P5RuBee14RuBeeBridgable"
+- "P5RuBee9RubyValue"
+- "Ps13SignedInteger"
+- "Ps12SignedNumber"
+- !private "Vs12StaticString"
+- "Ps10Streamable"
+- "Ps10Strideable"
+- "SS"
+- "Ps30StringInterpolationConvertible"
+- "Ps24StringLiteralConvertible"
+- "Ps31UnicodeScalarLiteralConvertible"
+- "Ps33_BuiltinBooleanLiteralConvertible"
+- "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- "Ps31_BuiltinFloatLiteralConvertible"
+- "Ps33_BuiltinIntegerLiteralConvertible"
+- "Ps32_BuiltinStringLiteralConvertible"
+- "Ps37_BuiltinUTF16StringLiteralConvertible"
+- "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- "Ps15_CVarArgAligned"
+- "Ps22_CVarArgPassedAsDouble"
+- "Ps14_Incrementable"
+- "Ps8_Integer"
+- "Ps18_IntegerArithmetic"
+- "Ps21_ObjectiveCBridgeable"
+- "Ps14_SignedInteger"
+- "Ps11_Strideable"
+depends-dynamic-lookup:
+depends-external:
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/Users/Joe/Projects/Mine/RuBee/Packages/Ruby-0.1.14/module.modulemap"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/shims/module.map"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+interface-hash: "9adb55b8513c3c471d91f5f927ebb71e"

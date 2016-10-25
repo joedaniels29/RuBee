@@ -1,7 +1,6 @@
-#10Clock
-![pods](https://img.shields.io/cocoapods/v/10Clock.svg?style=flat)
-![MIT](https://img.shields.io/cocoapods/v/10Clock.svg?style=flat)
-[![Build Status](https://travis-ci.org/joedaniels29/10Clock.svg?branch=master)](https://travis-ci.org/joedaniels29/10Clock)
+![RuBee](/assets/computed/RuBee.png)
+
+[![Build Status](https://travis-ci.org/joedaniels29/RuBee.svg?branch=master)](https://travis-ci.org/joedaniels29/10Clock)
 
 Dark and Mysterious🕶             |  Light Colors🌻
 :-------------------------:|:-------------------------:
@@ -23,8 +22,9 @@ then, to get updates for when the date changes, adopt the protocol `TenClockDele
 
 ```swift
 import TenClock
+
 class ViewController: UIViewController, TenClockDelegate {    
-    //Executed for every touch.
+    //Executed for every touch. a["map"]([RBlock{x, y in x["doctor"] }])
     func timesUpdated(_ clock:TenClock, startDate:Date,  endDate:Date  ) -> (){
         //...
     }

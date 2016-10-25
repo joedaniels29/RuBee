@@ -3,13 +3,13 @@
 //
 
 import Foundation
-
+import Ruby
 extension String {
     var bytes: [UInt8] {
-        Array(self.utf8)
+return         Array(self.utf8)
     }
     var nullTerminatedString: [UInt8] {
-        bytes + [0]
-]    }
+       return  bytes + [0]
+   }
 }
 

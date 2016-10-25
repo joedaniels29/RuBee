@@ -3,11 +3,10 @@
 //
 
 import Foundation
-
-protocol RuBeeBridgable {
-    var rubyValue: VALUE { get }
-    init(rb: VALUE) {
-    }
+import Ruby
+protocol RuBeeBridgable:RubyValue {
+//    var rubyValue: VALUE { get }
+    init(rb: VALUE)
 
 }
 extension RuBeeBridgable {
@@ -18,20 +17,21 @@ extension String: RuBeeBridgable {
         return rb_str_new_cstr(self)
     }
     init(rb: VALUE) {
-        String(rb_string_value_cstr(rb))
+        var rbs = rb
+        self.init(cString: rb_string_value_cstr(&rbs))
     }
 
     var symbol: RSymbol {
-        .init(string: self)
+        return RSymbol(string: self)
     }
 }
-extension Long: RuBeeBridgable {
-    var rubyValue: VALUE {
-        return nil
-    }
-    init(rb: VALUE) {
-    }
-}
+//extension Int64: RuBeeBridgable {
+//    var rubyValue: VALUE {
+//        return
+//    }
+//    init(rb: VALUE) {
+//    }
+//}
 
 extension Int: RuBeeBridgable {
     var rubyValue: VALUE {
@@ -39,8 +39,8 @@ extension Int: RuBeeBridgable {
     }
     init(rb: VALUE) {
         switch (RType.type(of:rb)){
-            case .fixnum: return self.init(long:rb_fix2long(rb))
-            case .bignum: return self.init(long:rb_num2long(rb))
+            case .fixnum:  self = rb_num2long(rb)
+            case .bignum:  self = rb_num2long(rb)
             default:fatalError("bad type.")
         }
     }
@@ -48,12 +48,12 @@ extension Int: RuBeeBridgable {
 
 extension Bool: RuBeeBridgable {
     var rubyValue: VALUE {
-        return self ? ruby_special_consts.RUBY_Qtrue as! VALUE : RUBY_Qfalse as! VALUE
+        return self ? unsafeBitCast(RUBY_Qtrue, to: VALUE.self) : unsafeBitCast(RUBY_Qfalse, to: VALUE.self)
     }
     init(rb: VALUE) {
         switch (RType.type(of:rb)){
-        case .fixnum: return self.init(long:rb_fix2long(rb))
-        case .bignum: return self.init(long:rb_num2long(rb))
+        case .true: self = true
+        case .false: self = false
         default:fatalError("bad type.")
         }
     }
@@ -64,22 +64,21 @@ extension Double: RuBeeBridgable {
     }
     init(rb: VALUE) {
         switch (RType.type(of:rb)){
-        case .float: return self = rb_float_value(rb)
+        case .float:  self = rb_float_value(rb)
         default:fatalError("bad type.")
         }
     }
 }
 
 
-extension Array<T:RuBee
->: RuBeeBridgable {
-    var rubyValue: VALUE {
-        return rb_float_new(self)
-    }
-    init(rb: VALUE) {
-        switch (RType.type(of:rb)){
-        case .float: return self = rb_float_value(rb)
-        default:fatalError("bad type.")
-        }
-    }
-}
+//extension Array<T> where T:RuBeeBridgable: RuBeeBridgable {
+//    var rubyValue: VALUE {
+//        return rb_float_new(self)
+//    }
+//    init(rb: VALUE) {
+//        switch (RType.type(of:rb)){
+//        case .float: return self = rb_float_value(rb)
+//        default:fatalError("bad type.")
+//        }
+//    }
+//}

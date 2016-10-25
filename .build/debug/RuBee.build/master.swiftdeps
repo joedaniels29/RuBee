@@ -1,6 +1,0 @@
-version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
-options: "0d766274249c83948855338b20936137"
-build_time: [530501332, 378311000]
-inputs:
-  "/Users/Joe/Projects/Mine/RuBee/Sources/RuBee.swift": !dirty [530482282, 0]
-  "/Users/Joe/Projects/Mine/RuBee/Sources/RValue.swift": !dirty [530501297, 0]

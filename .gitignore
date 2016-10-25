@@ -25,4 +25,4 @@ iOSInjectionProject/
 /target
 /log/*.log
 /tmp
-
+.build/

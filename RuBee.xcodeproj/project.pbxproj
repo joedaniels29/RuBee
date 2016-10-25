@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		123A03B600D330061B3415D6 /* SwiftTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0094EC48D5AAE19596CE /* SwiftTypes.swift */; };
+		123A0949457D8483668CAE33 /* re.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F16F2B782951FBAEA41 /* re.swift */; };
 		123A09F78A0FCF607919C0FF /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0D38D3E34EC1E0ACCA80 /* FoundationExtensions.swift */; };
 		__src_cc_ref_Sources/RuBee.swift /* RuBee.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/RuBee.swift /* RuBee.swift */; };
 		__src_cc_ref_Sources/RValue.swift /* RValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/RValue.swift /* RValue.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		123A0094EC48D5AAE19596CE /* SwiftTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTypes.swift; sourceTree = "<group>"; };
 		123A0D38D3E34EC1E0ACCA80 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		123A0F16F2B782951FBAEA41 /* re.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = re.swift; sourceTree = "<group>"; };
 		_____Product_RuBee /* RuBee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RuBee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		_____Product_RuBeeTests /* RuBeeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = RuBeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				__PBXFileRef_Sources/RValue.swift /* RValue.swift */,
 				123A0094EC48D5AAE19596CE /* SwiftTypes.swift */,
 				123A0D38D3E34EC1E0ACCA80 /* FoundationExtensions.swift */,
+				123A0F16F2B782951FBAEA41 /* re.swift */,
 			);
 			name = RuBee;
 			path = Sources;
@@ -204,6 +207,7 @@
 				__src_cc_ref_Sources/RValue.swift /* RValue.swift in Sources */,
 				123A03B600D330061B3415D6 /* SwiftTypes.swift in Sources */,
 				123A09F78A0FCF607919C0FF /* FoundationExtensions.swift in Sources */,
+				123A0949457D8483668CAE33 /* re.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

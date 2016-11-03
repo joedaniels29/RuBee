@@ -135,16 +135,16 @@ enum RTypedValue:// RawEquatable,
         case .module(let val): return val
         case .float(let val): return val.rubyValue
         case .string(let val): return val.rubyValue
-        case .regexp(let val): return RTypedValue.nil.rubyValue
-        case .array(let vals): return RTypedValue.nil.rubyValue
-        case .hash(let vals): return RTypedValue.nil.rubyValue
+        case .regexp( _): return RTypedValue.nil.rubyValue
+        case .array( _): return RTypedValue.nil.rubyValue
+        case .hash( _):return RTypedValue.nil.rubyValue
         case .`struct`(let val): return val
         case .bignum(let val): return val
-        case .file(let val): return RTypedValue.nil.rubyValue
-        case .data(let vals): return RTypedValue.nil.rubyValue
-        case .match(let vals): return RTypedValue.nil.rubyValue
-        case .complex(let vals): return RTypedValue.nil.rubyValue
-        case .rational(let vals, let va): return RTypedValue.nil.rubyValue
+        case .file( _): return RTypedValue.nil.rubyValue
+        case .data( _): return RTypedValue.nil.rubyValue
+        case .match( _): return RTypedValue.nil.rubyValue
+        case .complex( _): return RTypedValue.nil.rubyValue
+        case .rational( _, _): return RTypedValue.nil.rubyValue
         case .`nil`: return unsafeBitCast(RUBY_Qnil, to:VALUE.self)
         case .boolean(let bool)	: return bool.rubyValue
         case .symbol(let val): return val.rubyValue
@@ -155,7 +155,7 @@ enum RTypedValue:// RawEquatable,
         case .iclass(let val): return val
         case .zombie(let val): return val
         case .mask(let val): return val
-        default: fatalError("Bad ruby type!")
+//        default: fatalError("Bad ruby type!")
         }
     }
     init(VALUE: RUnsafeValue) {
@@ -192,32 +192,44 @@ enum RTypedValue:// RawEquatable,
     init(nilLiteral: ()) {
         self = .nil
     }
+    
+	func send(func:RFunction, args:[RubyValue] = []) -> RTypedValue{
+        let x: ID = rb_intern("RubyFunction")
+        return args.map{$0.rubyValue}.withUnsafeBufferPointer { p in
+        		return RTypedValue(VALUE: rb_funcall2(self.rubyValue, x , Int32(args.count), p.baseAddress!))
+        }
+		//
+        
+    }
 }
 
 
 struct RSymbol: ExpressibleByStringLiteral, RuBeeBridgable {
 //    enum is like union. Only more cute.
     enum Storage {
-        case id(ID), symbol(VALUE), string(String)
+//        case id(ID)
+        case symbol(VALUE)
+        case string(String)
     }
     var storage: Storage
-    var id: ID {
-        switch (storage) {
-        case .id(let id): return id
-        case .symbol(let VALUE): return rb_sym2id(VALUE)
-        case .string(let str): return rb_sym2id(rubyValue)
-        }
-    }
+    
+//    var id: ID {
+//        switch (storage) {
+//        case .id(let id): return id
+//        case .symbol(let val): return rb_sym2str(val)
+//        case .string(_): return rb_sym2id(&self.rubyValue)
+//        }
+//    }
     var rubyValue: VALUE{
         switch (storage){
-            case .id(let id) : return rb_id2sym(id)
+//            case .id(let id) : return rb_id2sym(id)
             case .symbol(let sym) : return sym
             case .string(let string): return string.rubyValue
         }
     }
     var string: String{
         switch (storage){
-        case .id(let id) : return String(rb:rubyValue)
+//        case .id(let id) : return String(rb:rubyValue)
         case .symbol(let sym) : return String(rb:sym)
         case .string(let string): return string
         }
@@ -235,19 +247,19 @@ struct RSymbol: ExpressibleByStringLiteral, RuBeeBridgable {
 		self.storage = .string(value)
 	}
     init(rb: VALUE) {
-        precondition(RType.type(of:rubyValue) == .symbol, "bad string type")
-        self.storage = .symbol(rubyValue)
+//        precondition(RType.type(of:rubyValue) == .symbol, "bad string type")
+        self.storage = .symbol(rb)
     }
-    init(id: ID) {
+//    init(id: ID) {
 //        precondition(RType.type(of:rubyValue) == .id, "what even is this?")
-        self.storage = .id(id)
-    }
+//        self.storage = .id(id)
+//    }
     // I think ID is the lightest weight type. is this possibly wrong?
-    mutating func normalize(){
-        switch(storage){
-        case .id(let id): return;
-        case .symbol(let vasym): storage = .id(id)
-        case .string(let str): storage = .id(id)
-        }
-    }
+//    mutating func normalize(){
+//        switch(storage){
+//        case .id(let id): return;
+//        case .symbol(let vasym): storage = .id(id)
+//        case .string(let str): storage = .id(id)
+//        }
+//    }
 }

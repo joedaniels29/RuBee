@@ -19,7 +19,7 @@ class Interpereter {
 
     init(options: [String]) {
         ruby_init()
-        var cArray: [String?] = options //+ [nil]
+        let cArray: [String?] = options //+ [nil]
         var cargs = cArray.map {
             $0.flatMap {
                 UnsafeMutablePointer<Int8>(strdup($0))
@@ -31,7 +31,8 @@ class Interpereter {
             free(UnsafeMutablePointer(mutating: ptr))
         }
     }
-
+    
+    
     func run() throws {
         var state: Int32 = 0;
         if ruby_executable_node(node, &state) != 0  {
@@ -43,8 +44,14 @@ class Interpereter {
 
         ruby_cleanup(state);
     }
+}
 
-//    static func safely() {
-
-//    }
+struct RFunction{
+	let name:String
+    init(name:String){
+        self.name = name
+    }
+    static func `func`(_ str:String) -> RFunction{
+        return self.init(name: str)
+    }
 }

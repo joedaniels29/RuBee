@@ -1,12 +1,8 @@
 ![RuBee](/assets/computed/RuBee.png)
 
-[![Build Status](https://travis-ci.org/joedaniels29/RuBee.svg?branch=master)](https://travis-ci.org/joedaniels29/10Clock)
+[![Build Status](https://travis-ci.org/joedaniels29/RuBee.svg?branch=master)](https://travis-ci.org/joedaniels29/RuBee)
 
-Dark and Mysterious🕶             |  Light Colors🌻
-:-------------------------:|:-------------------------:
-![](/assets/computed/10Clock.png)  |  ![](/assets/computed/green.png)
-
-## Usage
+## The Big Idea
 
 The control itsself is `TenClock`. Add that to your view hierarchy, and constrain it to be square (thats kindof important).
 
@@ -23,7 +19,7 @@ then, to get updates for when the date changes, adopt the protocol `TenClockDele
 ```swift
 import TenClock
 
-class ViewController: UIViewController, TenClockDelegate {    
+class ViewController: UIViewController, TenClockDelegate {
     //Executed for every touch. a["map"]([RBlock{x, y in x["doctor"] }])
     func timesUpdated(_ clock:TenClock, startDate:Date,  endDate:Date  ) -> (){
         //...

@@ -1,6 +1,6 @@
 import Foundation
 import Ruby
-
+import RuBeeSupport
 enum RType:Int32 {
     case none = 0x00
     case object = 0x01
@@ -207,29 +207,29 @@ enum RTypedValue:// RawEquatable,
 struct RSymbol: ExpressibleByStringLiteral, RuBeeBridgable {
 //    enum is like union. Only more cute.
     enum Storage {
-//        case id(ID)
+        case id(ID)
         case symbol(VALUE)
         case string(String)
     }
     var storage: Storage
     
-//    var id: ID {
-//        switch (storage) {
-//        case .id(let id): return id
-//        case .symbol(let val): return rb_sym2str(val)
-//        case .string(_): return rb_sym2id(&self.rubyValue)
-//        }
-//    }
+    var id: ID {
+        switch (storage) {
+        case .id(let id): return id
+        case .symbol(let val): return inter_rb_id_2_sym(val)
+        case .string(let str): return  rb_intern(str)
+        }
+    }
     var rubyValue: VALUE{
         switch (storage){
-//            case .id(let id) : return rb_id2sym(id)
+            case .id(let id) : return  inter_rb_id_2_sym(id)
             case .symbol(let sym) : return sym
             case .string(let string): return string.rubyValue
         }
     }
     var string: String{
         switch (storage){
-//        case .id(let id) : return String(rb:rubyValue)
+        case .id(let id) : return String(validatingUTF8:rb_id2name(id))!
         case .symbol(let sym) : return String(rb:sym)
         case .string(let string): return string
         }

@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		123A03B600D330061B3415D6 /* SwiftTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0094EC48D5AAE19596CE /* SwiftTypes.swift */; };
-		123A0949457D8483668CAE33 /* re.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F16F2B782951FBAEA41 /* re.swift */; };
-		123A09F78A0FCF607919C0FF /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0D38D3E34EC1E0ACCA80 /* FoundationExtensions.swift */; };
-		D856F9DB1DCB681C00661BF6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856F9DA1DCB681C00661BF6 /* main.swift */; };
-		D8A2FF651DBC4F3600D00EA5 /* Interpereter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A2FF641DBC4F3600D00EA5 /* Interpereter.swift */; };
-		D8F7AEE01DCB7538004074DC /* Intermediary.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F7AEDE1DCB7538004074DC /* Intermediary.c */; };
-		D8F7AEE11DCB7538004074DC /* Intermediary.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F7AEDE1DCB7538004074DC /* Intermediary.c */; };
+		123A0029FB7C578208C14E43 /* RuBeeSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A0859E09C82355409575D /* RuBeeSupport.m */; };
+		123A00D027ECC7D210D01130 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A08496E7118EF27660999 /* main.swift */; };
+		123A0230ACD715634EC05D9A /* SwiftTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A05B8AE8EEE835C41283B /* SwiftTypes.swift */; };
+		123A02AAEE3E866A051298A2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A08496E7118EF27660999 /* main.swift */; };
+		123A02CF61B81CEBFA89A8EE /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A08C0B342181AEDADD246 /* FoundationExtensions.swift */; };
+		123A05BE302D3872F666BDF0 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A08C0B342181AEDADD246 /* FoundationExtensions.swift */; };
+		123A0869D47A5813EEFC72F5 /* SwiftTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A05B8AE8EEE835C41283B /* SwiftTypes.swift */; };
+		123A0880142C84A557C29826 /* RValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0EA9F58CBC0C63B9D104 /* RValue.swift */; };
+		123A0ABBD0546DB17F039A2E /* RValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0EA9F58CBC0C63B9D104 /* RValue.swift */; };
+		123A0B224A47ECCECC1DF2FE /* RuBee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A056312ABA9870A1B834D /* RuBee.swift */; };
+		123A0B7BB93338B8BAA13963 /* re.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A06EE6F63116D73E6195C /* re.swift */; };
+		123A0B87A647F3CC2FB96383 /* re.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A06EE6F63116D73E6195C /* re.swift */; };
+		123A0DD14DC67B321D52B3EA /* RuBeeSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A0859E09C82355409575D /* RuBeeSupport.m */; };
+		123A0E7EAFE54B8789943A88 /* RuBee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A056312ABA9870A1B834D /* RuBee.swift */; };
+		123A0E7F0A0BE394CA4FE8E9 /* Interpereter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0674988EFB54850DE3F2 /* Interpereter.swift */; };
+		123A0F041E90EDD1A86C7A84 /* Interpereter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0674988EFB54850DE3F2 /* Interpereter.swift */; };
 		_LinkFileRef_RuBee_via_RuBeeTests /* RuBee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_RuBee" /* RuBee.framework */; };
-		__src_cc_ref_Sources/RValue.swift /* RValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/RValue.swift /* RValue.swift */; };
-		__src_cc_ref_Sources/RuBee.swift /* RuBee.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/RuBee.swift /* RuBee.swift */; };
 		__src_cc_ref_Tests/RuBeeTests/RuBeeTests.swift /* RuBeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/RuBeeTests/RuBeeTests.swift /* RuBeeTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,17 +38,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		123A0094EC48D5AAE19596CE /* SwiftTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTypes.swift; sourceTree = "<group>"; };
-		123A0D38D3E34EC1E0ACCA80 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
-		123A0F16F2B782951FBAEA41 /* re.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = re.swift; sourceTree = "<group>"; };
-		D856F9DA1DCB681C00661BF6 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		D8A2FF641DBC4F3600D00EA5 /* Interpereter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpereter.swift; sourceTree = "<group>"; };
-		D8F7AEDE1DCB7538004074DC /* Intermediary.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Intermediary.c; sourceTree = "<group>"; };
-		D8F7AEDF1DCB7538004074DC /* Intermediary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intermediary.h; sourceTree = "<group>"; };
+		123A056312ABA9870A1B834D /* RuBee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuBee.swift; sourceTree = "<group>"; };
+		123A05B8AE8EEE835C41283B /* SwiftTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTypes.swift; sourceTree = "<group>"; };
+		123A0674988EFB54850DE3F2 /* Interpereter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpereter.swift; sourceTree = "<group>"; };
+		123A06EE6F63116D73E6195C /* re.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = re.swift; sourceTree = "<group>"; };
+		123A08496E7118EF27660999 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		123A0859E09C82355409575D /* RuBeeSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuBeeSupport.m; sourceTree = "<group>"; };
+		123A08C0B342181AEDADD246 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		123A0EA9F58CBC0C63B9D104 /* RValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RValue.swift; sourceTree = "<group>"; };
+		123A0FB083C449A1965FC772 /* RuBeeSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuBeeSupport.h; sourceTree = "<group>"; };
+		D8F7AEE21DCBEA57004074DC /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		__PBXFileRef_RuBee.xcodeproj/Configs/Project.xcconfig /* RuBee.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RuBee.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
-		__PBXFileRef_Sources/RValue.swift /* RValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RValue.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Sources/RuBee.swift /* RuBee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuBee.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Tests/RuBeeTests/RuBeeTests.swift /* RuBeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuBeeTests.swift; sourceTree = "<group>"; };
 		"_____Product_RuBee" /* RuBee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RuBee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"_____Product_RuBeeTests" /* RuBeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = RuBeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +74,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		123A04394ED620348193F77B /* RuBeeSupport */ = {
+			isa = PBXGroup;
+			children = (
+				D8F7AEE21DCBEA57004074DC /* module.modulemap */,
+				123A0FB083C449A1965FC772 /* RuBeeSupport.h */,
+			);
+			path = RuBeeSupport;
+			sourceTree = "<group>";
+		};
+		123A0ECD2ECF16BDF111CD74 /* RuBeeSupport */ = {
+			isa = PBXGroup;
+			children = (
+				123A0859E09C82355409575D /* RuBeeSupport.m */,
+				123A0F11E05D5563DCD03694 /* include */,
+			);
+			name = RuBeeSupport;
+			path = Sources/RuBeeSupport;
+			sourceTree = "<group>";
+		};
+		123A0ED2BCF1A161D6C5B584 /* RuBee */ = {
+			isa = PBXGroup;
+			children = (
+				123A06EE6F63116D73E6195C /* re.swift */,
+				123A08496E7118EF27660999 /* main.swift */,
+				123A056312ABA9870A1B834D /* RuBee.swift */,
+				123A0EA9F58CBC0C63B9D104 /* RValue.swift */,
+				123A05B8AE8EEE835C41283B /* SwiftTypes.swift */,
+				123A0674988EFB54850DE3F2 /* Interpereter.swift */,
+				123A08C0B342181AEDADD246 /* FoundationExtensions.swift */,
+			);
+			name = RuBee;
+			path = Sources/RuBee;
+			sourceTree = "<group>";
+		};
+		123A0F11E05D5563DCD03694 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				123A04394ED620348193F77B /* RuBeeSupport */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		TestProducts_ /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,26 +155,10 @@
 		"_____Sources_" /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				"_______Group_RuBee" /* RuBee */,
+				123A0ED2BCF1A161D6C5B584 /* RuBee */,
+				123A0ECD2ECF16BDF111CD74 /* RuBeeSupport */,
 			);
 			name = Sources;
-			sourceTree = "<group>";
-		};
-		"_______Group_RuBee" /* RuBee */ = {
-			isa = PBXGroup;
-			children = (
-				__PBXFileRef_Sources/RuBee.swift /* RuBee.swift */,
-				D8A2FF641DBC4F3600D00EA5 /* Interpereter.swift */,
-				D856F9DA1DCB681C00661BF6 /* main.swift */,
-				__PBXFileRef_Sources/RValue.swift /* RValue.swift */,
-				123A0094EC48D5AAE19596CE /* SwiftTypes.swift */,
-				123A0D38D3E34EC1E0ACCA80 /* FoundationExtensions.swift */,
-				123A0F16F2B782951FBAEA41 /* re.swift */,
-				D8F7AEDE1DCB7538004074DC /* Intermediary.c */,
-				D8F7AEDF1DCB7538004074DC /* Intermediary.h */,
-			);
-			name = RuBee;
-			path = Sources;
 			sourceTree = "<group>";
 		};
 		"_______Group_RuBeeTests" /* RuBeeTests */ = {
@@ -219,14 +253,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				__src_cc_ref_Sources/RuBee.swift /* RuBee.swift in Sources */,
-				D8A2FF651DBC4F3600D00EA5 /* Interpereter.swift in Sources */,
-				D856F9DB1DCB681C00661BF6 /* main.swift in Sources */,
-				__src_cc_ref_Sources/RValue.swift /* RValue.swift in Sources */,
-				D8F7AEE01DCB7538004074DC /* Intermediary.c in Sources */,
-				123A03B600D330061B3415D6 /* SwiftTypes.swift in Sources */,
-				123A09F78A0FCF607919C0FF /* FoundationExtensions.swift in Sources */,
-				123A0949457D8483668CAE33 /* re.swift in Sources */,
+				123A0B87A647F3CC2FB96383 /* re.swift in Sources */,
+				123A02AAEE3E866A051298A2 /* main.swift in Sources */,
+				123A0B224A47ECCECC1DF2FE /* RuBee.swift in Sources */,
+				123A0880142C84A557C29826 /* RValue.swift in Sources */,
+				123A0230ACD715634EC05D9A /* SwiftTypes.swift in Sources */,
+				123A0E7F0A0BE394CA4FE8E9 /* Interpereter.swift in Sources */,
+				123A02CF61B81CEBFA89A8EE /* FoundationExtensions.swift in Sources */,
+				123A0DD14DC67B321D52B3EA /* RuBeeSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,8 +268,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				D8F7AEE11DCB7538004074DC /* Intermediary.c in Sources */,
 				__src_cc_ref_Tests/RuBeeTests/RuBeeTests.swift /* RuBeeTests.swift in Sources */,
+				123A0B7BB93338B8BAA13963 /* re.swift in Sources */,
+				123A00D027ECC7D210D01130 /* main.swift in Sources */,
+				123A0E7EAFE54B8789943A88 /* RuBee.swift in Sources */,
+				123A0ABBD0546DB17F039A2E /* RValue.swift in Sources */,
+				123A0869D47A5813EEFC72F5 /* SwiftTypes.swift in Sources */,
+				123A0F041E90EDD1A86C7A84 /* Interpereter.swift in Sources */,
+				123A05BE302D3872F666BDF0 /* FoundationExtensions.swift in Sources */,
+				123A0029FB7C578208C14E43 /* RuBeeSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

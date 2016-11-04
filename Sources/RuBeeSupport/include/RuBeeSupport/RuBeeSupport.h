@@ -6,13 +6,15 @@
 //
 //
 
-#ifndef Intermediary_h
-#define Intermediary_h
+#ifndef RuBeeSupport_h
+#define RuBeeSupport_h
 
 #include <stdio.h>
-#include <ruby/ruby.h>
-
+//#include <Ruby/Ruby.h>
+typedef unsigned long VALUE;
+typedef unsigned long ID;
 VALUE inter_sym2id();
+VALUE inter_rb_id_2_sym(ID id);
 
 
 #endif /* Intermediary_h */

@@ -14,10 +14,10 @@ struct RubyError: Error {
 
 }
 
-class Interpereter {
+open class Interpreter {
     var node: UnsafeMutableRawPointer
-
-    init(options: [String]) {
+    
+    public init(options: [String] = []) {
         ruby_init()
         let cArray: [String?] = options //+ [nil]
         var cargs = cArray.map {
@@ -32,15 +32,25 @@ class Interpereter {
         }
     }
 
-    func require(file: String) {
+    public func require(file: String) {
         rb_require(file)
     }
 
-    func require(url: String) {
+   public  func require(url: String) {
         rb_require("foo");
     }
 
-    func run() throws {
+	public var exitCode:Int?
+	public func cleanup() -> Int{
+		exitCode = Int(ruby_cleanup(0));
+		return  exitCode!
+	}
+    deinit {
+		if exitCode == nil{
+//			cleanup
+		}
+    }
+   public  func run() throws {
 
         var state: Int32 = 0;
         if ruby_executable_node(node, &state) != 0 {
@@ -53,14 +63,38 @@ class Interpereter {
         ruby_cleanup(state);
     }
 }
+//Global Vars
+extension Interpreter{
+
+    public func set(value:VALUE, for$:String ){
+        rb_gv_set(for$, value)
+    }
+   	public func get($:String ) -> VALUE{
+        return rb_gv_get($)
+    }
+}
+
 
 struct RFunction {
-    let name: String
-    init(name: String) {
+    public let name: String
+    public init(name: String) {
         self.name = name
     }
 
-    static func `func`(_ str: String) -> RFunction {
+    public static func `func`(_ str: String) -> RFunction {
         return self.init(name: str)
     }
 }
+
+
+//struct RProc {
+//    let name: String
+//    init(name: String) {
+//        self.name = name
+//    }
+//
+//    static func `func`(_ str: String) -> RFunction {
+//        return self.init(name: str)
+//    }
+//}
+//

@@ -4,34 +4,27 @@
 
 ## The Big Idea
 
-The control itsself is `TenClock`. Add that to your view hierarchy, and constrain it to be square (thats kindof important).
+Swift is awesome, but sometimes you really just need a different tool. Sometimes you've got some great models in your rails app, would like to pull them into your swift app.
+Other times you have JSON data that parses beautifully in Ruby, and dont want to redo/test/duplicate your work for swift.
 
-to set times, do:
+RuBee Might be able to help. :)
 
 ```swift
-self.tenClock.startDate = NSDate()
-self.tenClock.endDate = NSDate. //sometime later
+_ = Ruby.evaluate(string:"puts 'hello world'") //ruby always returns a value. Discard it if you dont want it.
+// > 'hello world'
+
+
+switch  RBridgedValue(Ruby.evaluate(string:"'hello world'")) {
+    case .string(let earthGreeting): print(earthGreeting)
+    default: fatalError()
+}
+// > 'hello world'
+
 ```
 
 make the date today.
 then, to get updates for when the date changes, adopt the protocol `TenClockDelegate`:
 
-```swift
-import TenClock
-
-class ViewController: UIViewController, TenClockDelegate {
-    //Executed for every touch. a["map"]([RBlock{x, y in x["doctor"] }])
-    func timesUpdated(_ clock:TenClock, startDate:Date,  endDate:Date  ) -> (){
-        //...
-    }
-
-    func timesChanged(clock:TenClock, startDate:NSDate,  endDate:NSDate  ) -> (){
-        print("start at: \(startDate), end at: \(endDate)")
-        self.beginTimeLabel.text = dateFormatter.stringFromDate(startDate)
-        self.endTimeLabel.text = dateFormatter.stringFromDate(endDate)
-    }
-    // ...
-```
 
 
 ## Contributing

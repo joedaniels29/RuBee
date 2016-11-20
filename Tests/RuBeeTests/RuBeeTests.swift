@@ -1,4 +1,5 @@
 import XCTest
+import RuBeeSupport
 @testable import RuBee
 
 class RuBeeTests: XCTestCase {

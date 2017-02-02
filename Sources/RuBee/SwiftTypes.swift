@@ -13,7 +13,7 @@ extension RuBeeBridgable {
 
 }
 extension String: RuBeeBridgable {
-    var rubyValue: VALUE {
+    public var rubyValue: VALUE {
         return rb_str_new_cstr(self)
     }
     init(rb: VALUE) {
@@ -34,7 +34,7 @@ extension String: RuBeeBridgable {
 //}
 
 extension Int: RuBeeBridgable {
-    var rubyValue: VALUE {
+    public var rubyValue: VALUE {
         return rb_long2num_inline(self)
     }
     init(rb: VALUE) {
@@ -47,7 +47,7 @@ extension Int: RuBeeBridgable {
 }
 
 extension Bool: RuBeeBridgable {
-    var rubyValue: VALUE {
+    public var rubyValue: VALUE {
         return self ? unsafeBitCast(RUBY_Qtrue, to: VALUE.self) : unsafeBitCast(RUBY_Qfalse, to: VALUE.self)
     }
     init(rb: VALUE) {
@@ -59,7 +59,7 @@ extension Bool: RuBeeBridgable {
     }
 }
 extension Double: RuBeeBridgable {
-    var rubyValue: VALUE {
+    public var rubyValue: VALUE {
         return rb_float_new(self)
     }
     init(rb: VALUE) {

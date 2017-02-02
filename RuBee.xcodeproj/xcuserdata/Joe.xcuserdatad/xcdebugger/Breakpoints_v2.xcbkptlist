@@ -47,5 +47,206 @@
             endingLineNumber = "10">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/RuBeeTests/RuBeeTests.swift"
+            timestampString = "507741988.332049"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RuBeeTests.RuBeeTests.testExample () -&gt; ()"
+                  moduleName = "RuBeeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joe/Projects/Mine/RuBee/Tests/RuBeeTests/RuBeeTests.swift"
+                  timestampString = "507693900.196149"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RuBeeTests.RuBeeTests.(testExample () -&gt; ()).(closure #1)"
+                  moduleName = "RuBeeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joe/Projects/Mine/RuBee/Tests/RuBeeTests/RuBeeTests.swift"
+                  timestampString = "507693900.197829"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "39">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/RuBeeTests/RuBeeTests.swift"
+            timestampString = "507741988.332049"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/RuBeeTests/RuBeeTests.swift"
+            timestampString = "507693904.235055"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1"
+            endingLineNumber = "1">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RuBeeTests.RuBeeTests.__deallocating_deinit"
+                  moduleName = "RuBeeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joe/Projects/Mine/RuBee/Tests/RuBeeTests/RuBeeTests.swift"
+                  timestampString = "507745722.10815"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RuBeeTests.RuBeeTests.init (invocation : Swift.Optional&lt;__ObjC.NSInvocation&gt;) -&gt; RuBeeTests.RuBeeTests"
+                  moduleName = "RuBeeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joe/Projects/Mine/RuBee/Tests/RuBeeTests/RuBeeTests.swift"
+                  timestampString = "507745722.110144"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RuBeeTests.RuBeeTests.__allocating_init (invocation : Swift.Optional&lt;__ObjC.NSInvocation&gt;) -&gt; RuBeeTests.RuBeeTests"
+                  moduleName = "RuBeeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joe/Projects/Mine/RuBee/Tests/RuBeeTests/RuBeeTests.swift"
+                  timestampString = "507745722.111916"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RuBeeTests.RuBeeTests.init (selector : ObjectiveC.Selector) -&gt; RuBeeTests.RuBeeTests"
+                  moduleName = "RuBeeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joe/Projects/Mine/RuBee/Tests/RuBeeTests/RuBeeTests.swift"
+                  timestampString = "507745722.113687"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RuBeeTests.RuBeeTests.__allocating_init (selector : ObjectiveC.Selector) -&gt; RuBeeTests.RuBeeTests"
+                  moduleName = "RuBeeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joe/Projects/Mine/RuBee/Tests/RuBeeTests/RuBeeTests.swift"
+                  timestampString = "507745722.115303"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RuBeeTests.RuBeeTests.init () -&gt; RuBeeTests.RuBeeTests"
+                  moduleName = "RuBeeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joe/Projects/Mine/RuBee/Tests/RuBeeTests/RuBeeTests.swift"
+                  timestampString = "507745722.116826"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RuBeeTests.RuBeeTests.__allocating_init () -&gt; RuBeeTests.RuBeeTests"
+                  moduleName = "RuBeeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joe/Projects/Mine/RuBee/Tests/RuBeeTests/RuBeeTests.swift"
+                  timestampString = "507745722.118274"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/RuBee/RValue.swift"
+            timestampString = "507745715.176896"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "send(func:args:do:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

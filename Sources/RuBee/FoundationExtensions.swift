@@ -3,7 +3,7 @@
 //
 
 import Foundation
-import Ruby
+//import Ruby
 extension String {
     var bytes: [UInt8] {
 return         Array(self.utf8)
@@ -12,4 +12,3 @@ return         Array(self.utf8)
        return  bytes + [0]
    }
 }
-

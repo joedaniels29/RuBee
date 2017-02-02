@@ -4,6 +4,21 @@
 <dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>OBJ_31</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>OBJ_46</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>OBJ_54</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
 		<key>______Target_RuBee</key>
 		<dict>
 			<key>primary</key>

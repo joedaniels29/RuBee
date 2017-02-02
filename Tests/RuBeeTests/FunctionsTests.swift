@@ -13,7 +13,7 @@ class FunctionTests: XCTestCase {
     func testOptions() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-            XCTAssert((try? Interpreter(options: ["-v", "-eputs 'Hello, world!'"]).run()) != nil)
+//            XCTAssert((try? Interpreter(options: ["-v", "-eputs 'Hello, world!'"]).run()) != nil)
 //        XCTAssertEqual(, "Hello, World!")
     }
 

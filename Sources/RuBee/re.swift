@@ -4,7 +4,7 @@
 
 import Foundation
 import Ruby
-protocol RRegexable {
+public protocol RRegexable {
     var regex:VALUE{get}
 }
 //

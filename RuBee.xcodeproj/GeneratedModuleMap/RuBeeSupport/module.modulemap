@@ -1,0 +1,5 @@
+module RuBeeSupport {
+    umbrella header "/Users/joe/Projects/Mine/RuBee/Sources/RuBeeSupport/include/RuBeeSupport/RuBeeSupport.h"
+    link "RuBeeSupport"
+    export *
+}

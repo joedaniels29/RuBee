@@ -7,409 +7,561 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		123A0029FB7C578208C14E43 /* RuBeeSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A0859E09C82355409575D /* RuBeeSupport.m */; };
-		123A00D027ECC7D210D01130 /* lmain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A08496E7118EF27660999 /* lmain.swift */; };
-		123A0230ACD715634EC05D9A /* SwiftTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A05B8AE8EEE835C41283B /* SwiftTypes.swift */; };
-		123A02AAEE3E866A051298A2 /* lmain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A08496E7118EF27660999 /* lmain.swift */; };
-		123A02CF61B81CEBFA89A8EE /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A08C0B342181AEDADD246 /* FoundationExtensions.swift */; };
-		123A05BE302D3872F666BDF0 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A08C0B342181AEDADD246 /* FoundationExtensions.swift */; };
-		123A0869D47A5813EEFC72F5 /* SwiftTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A05B8AE8EEE835C41283B /* SwiftTypes.swift */; };
-		123A0880142C84A557C29826 /* RValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0EA9F58CBC0C63B9D104 /* RValue.swift */; };
-		123A0ABBD0546DB17F039A2E /* RValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0EA9F58CBC0C63B9D104 /* RValue.swift */; };
-		123A0B224A47ECCECC1DF2FE /* RuBee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A056312ABA9870A1B834D /* RuBee.swift */; };
-		123A0B7BB93338B8BAA13963 /* re.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A06EE6F63116D73E6195C /* re.swift */; };
-		123A0B87A647F3CC2FB96383 /* re.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A06EE6F63116D73E6195C /* re.swift */; };
-		123A0DD14DC67B321D52B3EA /* RuBeeSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 123A0859E09C82355409575D /* RuBeeSupport.m */; };
-		123A0E7EAFE54B8789943A88 /* RuBee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A056312ABA9870A1B834D /* RuBee.swift */; };
-		123A0E7F0A0BE394CA4FE8E9 /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0674988EFB54850DE3F2 /* Interpreter.swift */; };
-		123A0F041E90EDD1A86C7A84 /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0674988EFB54850DE3F2 /* Interpreter.swift */; };
-		D84092431DE2476500B9A955 /* FunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84092411DE2445D00B9A955 /* FunctionsTests.swift */; };
-		_LinkFileRef_RuBee_via_RuBeeTests /* RuBee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_RuBee" /* RuBee.framework */; };
-		__src_cc_ref_Tests/RuBeeTests/RuBeeTests.swift /* RuBeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/RuBeeTests/RuBeeTests.swift /* RuBeeTests.swift */; };
+		OBJ_36 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* FoundationExtensions.swift */; };
+		OBJ_37 /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Interpreter.swift */; };
+		OBJ_38 /* lmain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* lmain.swift */; };
+		OBJ_39 /* re.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* re.swift */; };
+		OBJ_40 /* RuBee.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* RuBee.swift */; };
+		OBJ_41 /* RValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* RValue.swift */; };
+		OBJ_42 /* SwiftTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* SwiftTypes.swift */; };
+		OBJ_44 /* RuBeeSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* RuBeeSupport.framework */; };
+		OBJ_52 /* RuBeeSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* RuBeeSupport.m */; };
+		OBJ_59 /* FunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* FunctionsTests.swift */; };
+		OBJ_60 /* RuBeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* RuBeeTests.swift */; };
+		OBJ_62 /* RuBeeSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* RuBeeSupport.framework */; };
+		OBJ_63 /* RuBee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* RuBee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D8A2FF631DBC2BDA00D00EA5 /* PBXContainerItemProxy */ = {
+		D8FE71831E42A8A6002A912D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = __RootObject_ /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "______Target_RuBee";
+			remoteGlobalIDString = OBJ_46;
+			remoteInfo = RuBeeSupport;
+		};
+		D8FE71841E42A8A6002A912D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_46;
+			remoteInfo = RuBeeSupport;
+		};
+		D8FE71851E42A8A6002A912D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_31;
 			remoteInfo = RuBee;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		123A056312ABA9870A1B834D /* RuBee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuBee.swift; sourceTree = "<group>"; };
-		123A05B8AE8EEE835C41283B /* SwiftTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTypes.swift; sourceTree = "<group>"; };
-		123A0674988EFB54850DE3F2 /* Interpreter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpreter.swift; sourceTree = "<group>"; };
-		123A06EE6F63116D73E6195C /* re.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = re.swift; sourceTree = "<group>"; };
-		123A08496E7118EF27660999 /* lmain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lmain.swift; sourceTree = "<group>"; };
-		123A0859E09C82355409575D /* RuBeeSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuBeeSupport.m; sourceTree = "<group>"; };
-		123A08C0B342181AEDADD246 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
-		123A0EA9F58CBC0C63B9D104 /* RValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RValue.swift; sourceTree = "<group>"; };
-		123A0FB083C449A1965FC772 /* RuBeeSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuBeeSupport.h; sourceTree = "<group>"; };
-		D84092411DE2445D00B9A955 /* FunctionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsTests.swift; sourceTree = "<group>"; };
-		D8F7AEE21DCBEA57004074DC /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		__PBXFileRef_RuBee.xcodeproj/Configs/Project.xcconfig /* RuBee.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RuBee.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
-		__PBXFileRef_Tests/RuBeeTests/RuBeeTests.swift /* RuBeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuBeeTests.swift; sourceTree = "<group>"; };
-		"_____Product_RuBee" /* RuBee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RuBee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_RuBeeTests" /* RuBeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = RuBeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8FE71861E42AA09002A912D /* Sizezs.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sizezs.playground; sourceTree = "<group>"; };
+		OBJ_10 /* Interpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpreter.swift; sourceTree = "<group>"; };
+		OBJ_11 /* lmain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lmain.swift; sourceTree = "<group>"; };
+		OBJ_12 /* re.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = re.swift; sourceTree = "<group>"; };
+		OBJ_13 /* RuBee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuBee.swift; sourceTree = "<group>"; };
+		OBJ_14 /* RValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RValue.swift; sourceTree = "<group>"; };
+		OBJ_15 /* SwiftTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTypes.swift; sourceTree = "<group>"; };
+		OBJ_17 /* RuBeeSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuBeeSupport.m; sourceTree = "<group>"; };
+		OBJ_20 /* RuBeeSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuBeeSupport.h; sourceTree = "<group>"; };
+		OBJ_21 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = /Users/joe/Projects/Mine/RuBee/RuBee.xcodeproj/GeneratedModuleMap/RuBeeSupport/module.modulemap; sourceTree = "<group>"; };
+		OBJ_24 /* FunctionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsTests.swift; sourceTree = "<group>"; };
+		OBJ_25 /* RuBeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuBeeTests.swift; sourceTree = "<group>"; };
+		OBJ_26 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = SOURCE_ROOT; };
+		OBJ_28 /* RuBee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RuBee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_29 /* RuBeeSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RuBeeSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_30 /* RuBeeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = RuBeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* FoundationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		"___LinkPhase_RuBee" /* Frameworks */ = {
+		OBJ_43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_44 /* RuBeeSupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		"___LinkPhase_RuBeeTests" /* Frameworks */ = {
+		OBJ_61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				_LinkFileRef_RuBee_via_RuBeeTests /* RuBee.framework in Frameworks */,
+				OBJ_62 /* RuBeeSupport.framework in Frameworks */,
+				OBJ_63 /* RuBee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		123A04394ED620348193F77B /* RuBeeSupport */ = {
+		OBJ_16 /* RuBeeSupport */ = {
 			isa = PBXGroup;
 			children = (
-				D8F7AEE21DCBEA57004074DC /* module.modulemap */,
-				123A0FB083C449A1965FC772 /* RuBeeSupport.h */,
-			);
-			path = RuBeeSupport;
-			sourceTree = "<group>";
-		};
-		123A0ECD2ECF16BDF111CD74 /* RuBeeSupport */ = {
-			isa = PBXGroup;
-			children = (
-				123A0859E09C82355409575D /* RuBeeSupport.m */,
-				123A0F11E05D5563DCD03694 /* include */,
+				OBJ_17 /* RuBeeSupport.m */,
+				OBJ_18 /* include */,
 			);
 			name = RuBeeSupport;
 			path = Sources/RuBeeSupport;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
-		123A0ED2BCF1A161D6C5B584 /* RuBee */ = {
+		OBJ_18 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				123A06EE6F63116D73E6195C /* re.swift */,
-				123A08496E7118EF27660999 /* lmain.swift */,
-				123A056312ABA9870A1B834D /* RuBee.swift */,
-				123A0EA9F58CBC0C63B9D104 /* RValue.swift */,
-				123A05B8AE8EEE835C41283B /* SwiftTypes.swift */,
-				123A0674988EFB54850DE3F2 /* Interpreter.swift */,
-				123A08C0B342181AEDADD246 /* FoundationExtensions.swift */,
-			);
-			name = RuBee;
-			path = Sources/RuBee;
-			sourceTree = "<group>";
-		};
-		123A0F11E05D5563DCD03694 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				123A04394ED620348193F77B /* RuBeeSupport */,
+				OBJ_19 /* RuBeeSupport */,
+				OBJ_21 /* module.modulemap */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		TestProducts_ /* Tests */ = {
+		OBJ_19 /* RuBeeSupport */ = {
 			isa = PBXGroup;
 			children = (
-				"_____Product_RuBeeTests" /* RuBeeTests.xctest */,
+				OBJ_20 /* RuBeeSupport.h */,
 			);
-			name = Tests;
+			path = RuBeeSupport;
 			sourceTree = "<group>";
 		};
-		"___RootGroup_" = {
+		OBJ_22 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				__PBXFileRef_Package.swift /* Package.swift */,
-				"_____Configs_" /* Configs */,
-				"_____Sources_" /* Sources */,
-				"_______Tests_" /* Tests */,
-				"____Products_" /* Products */,
+				OBJ_23 /* RuBeeTests */,
 			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		"____Products_" /* Products */ = {
+		OBJ_23 /* RuBeeTests */ = {
 			isa = PBXGroup;
 			children = (
-				TestProducts_ /* Tests */,
-				"_____Product_RuBee" /* RuBee.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		"_____Configs_" /* Configs */ = {
-			isa = PBXGroup;
-			children = (
-				__PBXFileRef_RuBee.xcodeproj/Configs/Project.xcconfig /* RuBee.xcodeproj/Configs/Project.xcconfig */,
-			);
-			name = Configs;
-			sourceTree = "<group>";
-		};
-		"_____Sources_" /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				123A0ED2BCF1A161D6C5B584 /* RuBee */,
-				123A0ECD2ECF16BDF111CD74 /* RuBeeSupport */,
-			);
-			name = Sources;
-			sourceTree = "<group>";
-		};
-		"_______Group_RuBeeTests" /* RuBeeTests */ = {
-			isa = PBXGroup;
-			children = (
-				__PBXFileRef_Tests/RuBeeTests/RuBeeTests.swift /* RuBeeTests.swift */,
-				D84092411DE2445D00B9A955 /* FunctionsTests.swift */,
+				OBJ_24 /* FunctionsTests.swift */,
+				OBJ_25 /* RuBeeTests.swift */,
 			);
 			name = RuBeeTests;
 			path = Tests/RuBeeTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
-		"_______Tests_" /* Tests */ = {
+		OBJ_27 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"_______Group_RuBeeTests" /* RuBeeTests */,
+				OBJ_28 /* RuBee.framework */,
+				OBJ_29 /* RuBeeSupport.framework */,
+				OBJ_30 /* RuBeeTests.xctest */,
 			);
-			name = Tests;
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_22 /* Tests */,
+				OBJ_26 /* assets */,
+				OBJ_27 /* Products */,
+			);
+			name = "";
 			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* RuBee */,
+				OBJ_16 /* RuBeeSupport */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		OBJ_8 /* RuBee */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* FoundationExtensions.swift */,
+				D8FE71861E42AA09002A912D /* Sizezs.playground */,
+				OBJ_10 /* Interpreter.swift */,
+				OBJ_11 /* lmain.swift */,
+				OBJ_12 /* re.swift */,
+				OBJ_13 /* RuBee.swift */,
+				OBJ_14 /* RValue.swift */,
+				OBJ_15 /* SwiftTypes.swift */,
+			);
+			name = RuBee;
+			path = Sources/RuBee;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		"______Target_RuBee" /* RuBee */ = {
+		OBJ_31 /* RuBee */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = "_______Confs_RuBee" /* Build configuration list for PBXNativeTarget "RuBee" */;
+			buildConfigurationList = OBJ_32 /* Build configuration list for PBXNativeTarget "RuBee" */;
 			buildPhases = (
-				CompilePhase_RuBee /* Sources */,
-				"___LinkPhase_RuBee" /* Frameworks */,
+				OBJ_35 /* Sources */,
+				OBJ_43 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_45 /* PBXTargetDependency */,
 			);
 			name = RuBee;
 			productName = RuBee;
-			productReference = "_____Product_RuBee" /* RuBee.framework */;
+			productReference = OBJ_28 /* RuBee.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		"______Target_RuBeeTests" /* RuBeeTests */ = {
+		OBJ_46 /* RuBeeSupport */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = "_______Confs_RuBeeTests" /* Build configuration list for PBXNativeTarget "RuBeeTests" */;
+			buildConfigurationList = OBJ_47 /* Build configuration list for PBXNativeTarget "RuBeeSupport" */;
 			buildPhases = (
-				CompilePhase_RuBeeTests /* Sources */,
-				"___LinkPhase_RuBeeTests" /* Frameworks */,
+				OBJ_50 /* ShellScript */,
+				OBJ_51 /* Sources */,
+				OBJ_53 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				__Dependency_RuBee /* PBXTargetDependency */,
+			);
+			name = RuBeeSupport;
+			productName = RuBeeSupport;
+			productReference = OBJ_29 /* RuBeeSupport.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		OBJ_54 /* RuBeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_55 /* Build configuration list for PBXNativeTarget "RuBeeTests" */;
+			buildPhases = (
+				OBJ_58 /* Sources */,
+				OBJ_61 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_64 /* PBXTargetDependency */,
+				OBJ_65 /* PBXTargetDependency */,
 			);
 			name = RuBeeTests;
 			productName = RuBeeTests;
-			productReference = "_____Product_RuBeeTests" /* RuBeeTests.xctest */;
+			productReference = OBJ_30 /* RuBeeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		__RootObject_ /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
-				TargetAttributes = {
-					"______Target_RuBee" = {
-						LastSwiftMigration = 0800;
-					};
-					"______Target_RuBeeTests" = {
-						LastSwiftMigration = 0800;
-					};
-				};
 			};
-			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "RuBee" */;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "RuBee" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = "___RootGroup_";
-			productRefGroup = "____Products_" /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"______Target_RuBee" /* RuBee */,
-				"______Target_RuBeeTests" /* RuBeeTests */,
+				OBJ_31 /* RuBee */,
+				OBJ_46 /* RuBeeSupport */,
+				OBJ_54 /* RuBeeTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		OBJ_50 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${PROJECT_TEMP_DIR}/SymlinkLibs\"\nln -sf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${PROJECT_TEMP_DIR}/SymlinkLibs/lib${EXECUTABLE_NAME}.dylib\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		CompilePhase_RuBee /* Sources */ = {
+		OBJ_35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				123A0B87A647F3CC2FB96383 /* re.swift in Sources */,
-				123A02AAEE3E866A051298A2 /* lmain.swift in Sources */,
-				123A0B224A47ECCECC1DF2FE /* RuBee.swift in Sources */,
-				123A0880142C84A557C29826 /* RValue.swift in Sources */,
-				123A0230ACD715634EC05D9A /* SwiftTypes.swift in Sources */,
-				123A0E7F0A0BE394CA4FE8E9 /* Interpreter.swift in Sources */,
-				123A02CF61B81CEBFA89A8EE /* FoundationExtensions.swift in Sources */,
-				123A0DD14DC67B321D52B3EA /* RuBeeSupport.m in Sources */,
+				OBJ_36 /* FoundationExtensions.swift in Sources */,
+				OBJ_37 /* Interpreter.swift in Sources */,
+				OBJ_38 /* lmain.swift in Sources */,
+				OBJ_39 /* re.swift in Sources */,
+				OBJ_40 /* RuBee.swift in Sources */,
+				OBJ_41 /* RValue.swift in Sources */,
+				OBJ_42 /* SwiftTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CompilePhase_RuBeeTests /* Sources */ = {
+		OBJ_51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				__src_cc_ref_Tests/RuBeeTests/RuBeeTests.swift /* RuBeeTests.swift in Sources */,
-				123A0B7BB93338B8BAA13963 /* re.swift in Sources */,
-				123A00D027ECC7D210D01130 /* lmain.swift in Sources */,
-				123A0E7EAFE54B8789943A88 /* RuBee.swift in Sources */,
-				123A0ABBD0546DB17F039A2E /* RValue.swift in Sources */,
-				D84092431DE2476500B9A955 /* FunctionsTests.swift in Sources */,
-				123A0869D47A5813EEFC72F5 /* SwiftTypes.swift in Sources */,
-				123A0F041E90EDD1A86C7A84 /* Interpreter.swift in Sources */,
-				123A05BE302D3872F666BDF0 /* FoundationExtensions.swift in Sources */,
-				123A0029FB7C578208C14E43 /* RuBeeSupport.m in Sources */,
+				OBJ_52 /* RuBeeSupport.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_59 /* FunctionsTests.swift in Sources */,
+				OBJ_60 /* RuBeeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		__Dependency_RuBee /* PBXTargetDependency */ = {
+		OBJ_45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "______Target_RuBee" /* RuBee */;
-			targetProxy = D8A2FF631DBC2BDA00D00EA5 /* PBXContainerItemProxy */;
+			target = OBJ_46 /* RuBeeSupport */;
+			targetProxy = D8FE71831E42A8A6002A912D /* PBXContainerItemProxy */;
+		};
+		OBJ_64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_46 /* RuBeeSupport */;
+			targetProxy = D8FE71841E42A8A6002A912D /* PBXContainerItemProxy */;
+		};
+		OBJ_65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_31 /* RuBee */;
+			targetProxy = D8FE71851E42A8A6002A912D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		_ReleaseConf_RuBee /* Release */ = {
+		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				HEADER_SEARCH_PATHS = "/Users/Joe/Projects/Mine/RuBee/Packages/Ruby-0.1.14";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"Packages/Ruby-0.1.14",
+					Sources/RuBeeSupport/include,
+				);
 				INFOPLIST_FILE = RuBee.xcodeproj/RuBee_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/SymlinkLibs/";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = RuBee;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SWIFT_VERSION = 3.0;
+				TARGET_NAME = RuBee;
 			};
-			name = Release;
+			name = Debug;
 		};
-		_ReleaseConf_RuBeeTests /* Release */ = {
+		OBJ_34 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				HEADER_SEARCH_PATHS = "/Users/Joe/Projects/Mine/RuBee/Packages/Ruby-0.1.14";
-				INFOPLIST_FILE = RuBee.xcodeproj/RuBeeTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		"___DebugConf_RuBee" /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				HEADER_SEARCH_PATHS = "/Users/Joe/Projects/Mine/RuBee/Packages/Ruby-0.1.14";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"Packages/Ruby-0.1.14",
+					Sources/RuBeeSupport/include,
+				);
 				INFOPLIST_FILE = RuBee.xcodeproj/RuBee_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/SymlinkLibs/";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = RuBee;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		"___DebugConf_RuBeeTests" /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				HEADER_SEARCH_PATHS = "/Users/Joe/Projects/Mine/RuBee/Packages/Ruby-0.1.14";
-				INFOPLIST_FILE = RuBee.xcodeproj/RuBeeTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		"_____Release_" /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = __PBXFileRef_RuBee.xcodeproj/Configs/Project.xcconfig /* RuBee.xcodeproj/Configs/Project.xcconfig */;
-			buildSettings = {
+				TARGET_NAME = RuBee;
 			};
 			name = Release;
 		};
-		"_______Debug_" /* Debug */ = {
+		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = __PBXFileRef_RuBee.xcodeproj/Configs/Project.xcconfig /* RuBee.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					Sources/RuBeeSupport/include,
+					"Packages/Ruby-0.1.14",
+				);
+				INFOPLIST_FILE = RuBee.xcodeproj/RuBeeSupport_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MODULEMAP_FILE = RuBee.xcodeproj/GeneratedModuleMap/RuBeeSupport/module.modulemap;
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = RuBeeSupport;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				TARGET_NAME = RuBeeSupport;
 			};
 			name = Debug;
+		};
+		OBJ_49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					Sources/RuBeeSupport/include,
+					"Packages/Ruby-0.1.14",
+				);
+				INFOPLIST_FILE = RuBee.xcodeproj/RuBeeSupport_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MODULEMAP_FILE = RuBee.xcodeproj/GeneratedModuleMap/RuBeeSupport/module.modulemap;
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = RuBeeSupport;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				TARGET_NAME = RuBeeSupport;
+			};
+			name = Release;
+		};
+		OBJ_56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"Packages/Ruby-0.1.14",
+					Sources/RuBeeSupport/include,
+				);
+				INFOPLIST_FILE = RuBee.xcodeproj/RuBeeTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/SymlinkLibs/";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = RuBeeTests;
+			};
+			name = Debug;
+		};
+		OBJ_57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"Packages/Ruby-0.1.14",
+					Sources/RuBeeSupport/include,
+				);
+				INFOPLIST_FILE = RuBee.xcodeproj/RuBeeTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/SymlinkLibs/";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = RuBeeTests;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		"___RootConfs_" /* Build configuration list for PBXProject "RuBee" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "RuBee" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				"_______Debug_" /* Debug */,
-				"_____Release_" /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		"_______Confs_RuBee" /* Build configuration list for PBXNativeTarget "RuBee" */ = {
+		OBJ_32 /* Build configuration list for PBXNativeTarget "RuBee" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				"___DebugConf_RuBee" /* Debug */,
-				_ReleaseConf_RuBee /* Release */,
+				OBJ_33 /* Debug */,
+				OBJ_34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		"_______Confs_RuBeeTests" /* Build configuration list for PBXNativeTarget "RuBeeTests" */ = {
+		OBJ_47 /* Build configuration list for PBXNativeTarget "RuBeeSupport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				"___DebugConf_RuBeeTests" /* Debug */,
-				_ReleaseConf_RuBeeTests /* Release */,
+				OBJ_48 /* Debug */,
+				OBJ_49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_55 /* Build configuration list for PBXNativeTarget "RuBeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_56 /* Debug */,
+				OBJ_57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = __RootObject_ /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }

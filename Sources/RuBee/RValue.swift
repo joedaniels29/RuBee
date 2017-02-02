@@ -1,7 +1,10 @@
 import Foundation
 import Ruby
 import RuBeeSupport
-enum RType:Int32 {
+
+
+
+enum RType: Int32 {
     case none = 0x00
     case object = 0x01
     case `class` = 0x02
@@ -30,23 +33,57 @@ enum RType:Int32 {
     case zombie = 0x1d
     case mask = 0x1f
     init(VALUE: VALUE) {
-    	self.init(rawValue: rb_type(VALUE))!
+        self.init(rawValue: rb_type(VALUE))!
     }
 
-	static func type(of val: VALUE) -> RType {
+    static func type(of val: VALUE) -> RType {
         return RType.init(rawValue: rb_type(val))!
-	}
-
+    }
 }
-protocol RubyValue {
+public protocol RubyValue {
     var rubyValue: VALUE { get }
+    func send(func: RFunction, args: [RubyValue] , do: ( ([RubyValue]) -> (RubyValue))? ) -> RubyValue
+    
+    
 }
-struct RUnsafeValue: CustomStringConvertible, RubyValue {
-    var rawValue: VALUE
-    var rubyValue: VALUE {
-        return rawValue
+public extension RubyValue{
+    public var typed: RTypedValue {
+        return RTypedValue(VALUE: rubyValue)
     }
     
+    public var rvalue:RValue{
+        return RValue(VALUE:rubyValue)
+    }
+    func send(func: RFunction, args: [RubyValue] = [], do: ( ([RubyValue]) -> (RubyValue))? = nil ) -> RubyValue{
+        return self.rvalue.send(func:`func`, args: args, do: `do`)
+    }
+    public func send(func: RFunction, args: [RubyValue] = [], do: @escaping (RubyValue) -> (RubyValue)) -> RValue {
+        return RValue(self.send(func:`func`, args: args, do: { `do`($0.first!) }).rubyValue)
+    }
+
+    func inspect() -> RValue{
+        return RValue(rb_inspect(self.rubyValue))
+    }
+}
+class TypeBox<T>{
+    var val:T
+    init(val:T){
+        self.val = val
+    }
+    var rubyValue:VALUE{
+        return unsafeBitCast(self, to: VALUE.self)
+    }
+}
+
+var g:TypeBox<([RubyValue]) -> (RubyValue)>? = nil
+public struct RValue: CustomStringConvertible, RubyValue {
+    var rawValue: VALUE
+    public var rubyValue: VALUE {
+        return rawValue
+    }
+    init(_ v:VALUE) {
+        rawValue = v
+    }
     init(VALUE: VALUE) {
         rawValue = VALUE
     }
@@ -54,16 +91,48 @@ struct RUnsafeValue: CustomStringConvertible, RubyValue {
     var typed: RTypedValue {
         return RTypedValue(VALUE: rawValue)
     }
-    var description: String {
+    public var description: String {
         var rbs = rawValue
-        return String(cString:rb_string_value_cstr(&rbs))
+        return String(cString: rb_string_value_cstr(&rbs))
+    }
+
+	typealias RbFnType = @convention(c) () -> VALUE
+    func send(func: RFunction, args: [RubyValue] = [], do: ( ([RubyValue]) -> (RubyValue))? = nil) -> RValue {
+        return args.map{
+            $0.rubyValue
+        }.withUnsafeBufferPointer { p -> RValue in
+            if let doable = `do` {
+                let wrapping: @convention(c)(VALUE, AnyObject, Int, UnsafePointer<VALUE>) -> (VALUE) = { fst, data, argc, argv in
+                		if let doable = g {
+						return doable.val(Array(UnsafeBufferPointer(start: argv, count: argc)).map {
+                    			return RValue(VALUE: $0)
+                			}).rubyValue
+					}
+            		return RTypedValue.nil.rubyValue
+            	}
+            	g = TypeBox(val: doable)
+				
+                
+            	return RValue(VALUE:
+                		rb_block_call(self.rubyValue,
+                    		          `func`.id,
+                        		      Int32(args.count),
+                        		      UnsafeMutablePointer(mutating: p.baseAddress!),
+                        		      unsafeBitCast(wrapping, to: RbFnType.self),
+                                		g!.rubyValue))
+            }else {
+             	return RValue(rb_funcall2( self.rubyValue, `func`.id,  Int32(args.count), p.baseAddress!))
+            }
+            
+            
+        }
     }
 }
 
-enum RTypedValue:// RawEquatable,
+public enum RTypedValue: // RawEquatable,
                   ExpressibleByArrayLiteral,
                   ExpressibleByStringLiteral,
-//                  ExpressibleByDictionaryLiteral,
+                  //                  ExpressibleByDictionaryLiteral,
                   ExpressibleByBooleanLiteral,
                   ExpressibleByFloatLiteral,
                   ExpressibleByIntegerLiteral,
@@ -102,21 +171,21 @@ enum RTypedValue:// RawEquatable,
         case .`class`: self = .`class`(VALUE)
         case .module: self = .module(VALUE)
         case .float: self = .float(Double(rb: VALUE))
-        case .string: self = .string(String(rb:VALUE))
-//        case .regexp: self = .regexp()
-//        case .array: self = .array(Array(rb:VALUE))
-//        case .hash: ([Hashable: RTypedValue])
-//        case .`struct`: (VALUE)
-//        case .bignum: (VALUE)
-//        case .file: (FileHandle)
-//        case .data: (Data)
-//        case .match: (String)
-//        case .complex: (Int, Int)
-//        case .rational: self = .rational(Int, Int)
+        case .string: self = .string(String(rb: VALUE))
+                //        case .regexp: self = .regexp()
+                //        case .array: self = .array(Array(rb:VALUE))
+                //        case .hash: ([Hashable: RTypedValue])
+                //        case .`struct`: (VALUE)
+                //        case .bignum: (VALUE)
+                //        case .file: (FileHandle)
+                //        case .data: (Data)
+                //        case .match: (String)
+                //        case .complex: (Int, Int)
+                //        case .rational: self = .rational(Int, Int)
         case .`nil`: self = .nil
         case .`false`: self = .boolean(false)
         case .`true`: self = .boolean(true)
-        case .symbol: self = .symbol(RSymbol(rb:VALUE))
+        case .symbol: self = .symbol(RSymbol(rb: VALUE))
         case .fixnum: self = .fixnum(Int(rb_num2long(VALUE)))
         case .undef: self = .undef(VALUE)
         case .imemo: self = .imemo(VALUE)
@@ -127,7 +196,7 @@ enum RTypedValue:// RawEquatable,
         default: fatalError("Bad ruby type!")
         }
     }
-    var rubyValue: VALUE {
+    public var rubyValue: VALUE {
         switch self {
         case .object(let val): return val
         case .none(let val): return val
@@ -135,18 +204,18 @@ enum RTypedValue:// RawEquatable,
         case .module(let val): return val
         case .float(let val): return val.rubyValue
         case .string(let val): return val.rubyValue
-        case .regexp( _): return RTypedValue.nil.rubyValue
-        case .array( _): return RTypedValue.nil.rubyValue
-        case .hash( _):return RTypedValue.nil.rubyValue
+        case .regexp(_): return RTypedValue.nil.rubyValue
+        case .array(_): return RTypedValue.nil.rubyValue
+        case .hash(_):return RTypedValue.nil.rubyValue
         case .`struct`(let val): return val
         case .bignum(let val): return val
-        case .file( _): return RTypedValue.nil.rubyValue
-        case .data( _): return RTypedValue.nil.rubyValue
-        case .match( _): return RTypedValue.nil.rubyValue
-        case .complex( _): return RTypedValue.nil.rubyValue
-        case .rational( _, _): return RTypedValue.nil.rubyValue
-        case .`nil`: return unsafeBitCast(RUBY_Qnil, to:VALUE.self)
-        case .boolean(let bool)	: return bool.rubyValue
+        case .file(_): return RTypedValue.nil.rubyValue
+        case .data(_): return RTypedValue.nil.rubyValue
+        case .match(_): return RTypedValue.nil.rubyValue
+        case .complex(_): return RTypedValue.nil.rubyValue
+        case .rational(_, _): return RTypedValue.nil.rubyValue
+        case .`nil`: return VALUE(RUBY_Qnil.rawValue)
+        case .boolean(let bool): return bool.rubyValue
         case .symbol(let val): return val.rubyValue
         case .fixnum(let val): return val.rubyValue
         case .undef(let val): return val
@@ -155,111 +224,103 @@ enum RTypedValue:// RawEquatable,
         case .iclass(let val): return val
         case .zombie(let val): return val
         case .mask(let val): return val
-//        default: fatalError("Bad ruby type!")
+                //        default: fatalError("Bad ruby type!")
         }
     }
-    init(VALUE: RUnsafeValue) {
-        self.init(VALUE:VALUE.rubyValue)
+    init(VALUE: RubyValue) {
+        self.init(VALUE: VALUE.rubyValue)
     }
-    init(arrayLiteral: RTypedValue...) {
+    public init(arrayLiteral: RTypedValue...) {
         self = .array(arrayLiteral)
     }
-    init(stringLiteral value: String) {
+    public init(stringLiteral value: String) {
         self = .string(value)
     }
-	public init(unicodeScalarLiteral value: String){
-		self = .string(value)
-	}
-    public init(extendedGraphemeClusterLiteral value: String){
-		self = .string(value)
-	}
-    init(booleanLiteral value: BooleanLiteralType) {
+    public init(unicodeScalarLiteral value: String) {
+        self = .string(value)
+    }
+    public init(extendedGraphemeClusterLiteral value: String) {
+        self = .string(value)
+    }
+    public init(booleanLiteral value: BooleanLiteralType) {
         self = .boolean(value)
     }
-//    init(dictionaryLiteral elements: (String, RTypedValue)...) {
-//        var dictionary: [Hashable:RTypedValue] = [:]
-//        for (element, count) in elements {
-//            dictionary[element] = count;
-//        }
-//        self = .hash(dictionary)
-//    }
-    init(floatLiteral: Double) {
+    //    init(dictionaryLiteral elements: (String, RTypedValue)...) {
+    //        var dictionary: [Hashable:RTypedValue] = [:]
+    //        for (element, count) in elements {
+    //            dictionary[element] = count;
+    //        }
+    //        self = .hash(dictionary)
+    //    }
+    public init(floatLiteral: Double) {
         self = .float(floatLiteral)
     }
-    init(integerLiteral: Int) {
+    public init(integerLiteral: Int) {
         self = .fixnum(integerLiteral)
     }
-    init(nilLiteral: ()) {
+    public init(nilLiteral: ()) {
         self = .nil
     }
-    
-	func send(func:RFunction, args:[RubyValue] = []) -> RTypedValue{
-        let x: ID = rb_intern("RubyFunction")
-        return args.map{$0.rubyValue}.withUnsafeBufferPointer { p in
-        		return RTypedValue(VALUE: rb_funcall2(self.rubyValue, x , Int32(args.count), p.baseAddress!))
-        }
-		//
-        
-    }
+
 }
 
 
-struct RSymbol: ExpressibleByStringLiteral, RuBeeBridgable {
-//    enum is like union. Only more cute.
+public struct RSymbol: ExpressibleByStringLiteral, RuBeeBridgable {
+    //    enum is like union. Only more cute.
     enum Storage {
         case id(ID)
         case symbol(VALUE)
         case string(String)
     }
     var storage: Storage
-    
+
     var id: ID {
         switch (storage) {
         case .id(let id): return id
         case .symbol(let val): return inter_rb_id_2_sym(val)
-        case .string(let str): return  rb_intern(str)
+        case .string(let str): return rb_intern(str)
         }
     }
-    var rubyValue: VALUE{
-        switch (storage){
-            case .id(let id) : return  inter_rb_id_2_sym(id)
-            case .symbol(let sym) : return sym
-            case .string(let string): return string.rubyValue
+    public var rubyValue: VALUE {
+        switch (storage) {
+        case .id(let id): return inter_rb_id_2_sym(id)
+        case .symbol(let sym): return sym
+        case .string(let string): return string.rubyValue
         }
     }
-    var string: String{
-        switch (storage){
-        case .id(let id) : return String(validatingUTF8:rb_id2name(id))!
-        case .symbol(let sym) : return String(rb:sym)
+    var string: String {
+        switch (storage) {
+        case .id(let id): return String(validatingUTF8: rb_id2name(id))!
+        case .symbol(let sym): return String(rb: sym)
         case .string(let string): return string
         }
     }
-    init(string : String) {
+    init(string: String) {
         self.storage = .string(string)
     }
-    init(stringLiteral value: String) {
+    public init(stringLiteral value: String) {
         self.storage = .string(value)
     }
-	public init(unicodeScalarLiteral value: String){
-		self.storage = .string(value)
-	}
-    public init(extendedGraphemeClusterLiteral value: String){
-		self.storage = .string(value)
-	}
+    public init(unicodeScalarLiteral value: String) {
+        self.storage = .string(value)
+    }
+    public init(extendedGraphemeClusterLiteral value: String) {
+        self.storage = .string(value)
+    }
     init(rb: VALUE) {
-//        precondition(RType.type(of:rubyValue) == .symbol, "bad string type")
+        //        precondition(RType.type(of:rubyValue) == .symbol, "bad string type")
         self.storage = .symbol(rb)
     }
-//    init(id: ID) {
-//        precondition(RType.type(of:rubyValue) == .id, "what even is this?")
-//        self.storage = .id(id)
-//    }
+    //    init(id: ID) {
+    //        precondition(RType.type(of:rubyValue) == .id, "what even is this?")
+    //        self.storage = .id(id)
+    //    }
     // I think ID is the lightest weight type. is this possibly wrong?
-//    mutating func normalize(){
-//        switch(storage){
-//        case .id(let id): return;
-//        case .symbol(let vasym): storage = .id(id)
-//        case .string(let str): storage = .id(id)
-//        }
-//    }
+    //    mutating func normalize(){
+    //        switch(storage){
+    //        case .id(let id): return;
+    //        case .symbol(let vasym): storage = .id(id)
+    //        case .string(let str): storage = .id(id)
+    //        }
+    //    }
 }

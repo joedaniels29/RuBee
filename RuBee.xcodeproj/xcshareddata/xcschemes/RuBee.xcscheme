@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_RuBee"
+               BlueprintIdentifier = "OBJ_31"
                BuildableName = "RuBee.framework"
                BlueprintName = "RuBee"
+               ReferencedContainer = "container:RuBee.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_46"
+               BuildableName = "RuBeeSupport.framework"
+               BlueprintName = "RuBeeSupport"
                ReferencedContainer = "container:RuBee.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_RuBeeTests"
+               BlueprintIdentifier = "OBJ_54"
                BuildableName = "RuBeeTests.xctest"
                BlueprintName = "RuBeeTests"
                ReferencedContainer = "container:RuBee.xcodeproj">
@@ -55,7 +69,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "______Target_RuBee"
+            BlueprintIdentifier = "OBJ_31"
             BuildableName = "RuBee.framework"
             BlueprintName = "RuBee"
             ReferencedContainer = "container:RuBee.xcodeproj">
